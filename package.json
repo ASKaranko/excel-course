@@ -1,0 +1,24 @@
+{
+  "name": "excel-course",
+  "version": "1.0.0",
+  "description": "Pure Javascript on example of Excel application development",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ASKaranko/excel-course.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "excel"
+  ],
+  "author": "Andrei Karanko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ASKaranko/excel-course/issues"
+  },
+  "homepage": "https://github.com/ASKaranko/excel-course#readme"
+}
