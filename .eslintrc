@@ -9,14 +9,19 @@
     "arrow-parens": "off",
     "indent": [
       "error",
-      2
+      "tab"
     ],
     "comma-dangle": "off",
     "linebreak-style": [
       "error",
       "windows"
     ],
-    "require-jsdoc": "off"
+    "require-jsdoc": "off",
+    "quotes": "off",
+    "no-tabs": [
+      "error",
+      { "allowIndentationTabs": true }
+    ]
   },
   "extends": ["eslint:recommended", "google"]
 }
