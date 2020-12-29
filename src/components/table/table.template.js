@@ -24,7 +24,7 @@ function createRow(content, index) {
 	</div>
 	`;
 }
-// _ placeholder используется, если символ не используется
+// _ placeholder используется, если параметр не используется
 function toChar(_, index) {
 	return String.fromCharCode(CODES.A + index);
 }
