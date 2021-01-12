@@ -15,7 +15,7 @@ export class DomListener {
 				throw new Error(`Method ${method} doesn't 
 				exist in ${this.name} Component`);
 			}
-			// Аналог eventListener, так как $root - instance Dom
+			// Аналог eventListener, так как $root - instance
 			this[method] = this[method].bind(this);
 			this.$root.on(listener, this[method]);
 		});

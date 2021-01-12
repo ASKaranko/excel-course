@@ -3,23 +3,30 @@ const CODES = {
 	Z: 90
 };
 
-// eslint-disable-next-line no-unused-vars
-function toCell(cell) {
+function toCell(_, col) {
 	return `
-		<div class="cell" contenteditable>${cell}</div>
+		<div class="cell" contenteditable data-col="${col}"></div>
 	`;
 }
 
-function toColumn(col) {
+function toColumn(col, index) {
 	return `
-		<div class="column">${col}</div>
+		<div class="column" data-type="resizable" data-col="${index}">
+			${col}
+			<div class="col-resize" data-resize="col"></div>
+		</div>
 	`;
 }
 
 function createRow(content, index) {
+	const resize = index ?
+		'<div class="row-resize" data-resize="row"></div>' : '';
 	return `
-	<div class="row">
-		<div class="row-info">${index ? index : ''}</div>
+	<div class="row" data-type="resizable">
+		<div class="row-info">
+			${index ? index : ''}
+			${resize}
+		</div>
 		<div class="row-data">${content}</div>
 	</div>
 	`;
@@ -45,7 +52,7 @@ export function createTable(rowsCount = 15) {
 		.map(toCell)
 		.join('');
 
-	rows.push(createRow(cols));
+	rows.push(createRow(cols, null));
 	for (let i = 0; i < rowsCount; i++) {
 		rows.push(createRow(cells, i+1));
 	}
