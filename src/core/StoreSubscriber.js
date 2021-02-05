@@ -23,6 +23,10 @@ export class StoreSubscriber {
 			// Чтобы повторно не вызывать логику при разнице значений ключей
 			// сохраняем новое значение в prevState
 			this.prevState = this.store.getState();
+
+			if (process.env.NODE_ENV === 'development') {
+				window['redux'] = this.prevState;
+			}
 		});
 	}
 
