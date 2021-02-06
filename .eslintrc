@@ -1,9 +1,10 @@
-{
+ {
   "parser": "babel-eslint",
   "env": {
     "browser": true,
     "es6": true,
-    "node": true
+    "node": true,
+    "jest/globals": true
   },
   "rules": {
     "arrow-parens": "off",
@@ -23,5 +24,6 @@
       { "allowIndentationTabs": true }
     ]
   },
+  "plugins": ["jest"],
   "extends": ["eslint:recommended", "google"]
 }
